@@ -1,7 +1,7 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/vsf-core": "^0.1.1",
+        "@youwol/vsf-core": "^0.1.2",
         "@youwol/flux-view": "^1.1.1"
     },
     "includedInBundle": {}
@@ -51,7 +51,7 @@ export const setup = {
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/vsf-debug&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/vsf-debug',
     sourceGithub:'https://github.com/youwol/vsf-debug',
-    userGuide:'https://l.youwol.com/doc/@youwol/vsf-debug',
+    userGuide:'',
     apiVersion:'01',
     runTimeDependencies,
     externals,
