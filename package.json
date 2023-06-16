@@ -1,7 +1,7 @@
 {
     "name": "@youwol/vsf-debug",
     "description": "",
-    "version": "0.1.0-wip",
+    "version": "0.1.0",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/vsf-debug#README.md",
     "main": "dist/@youwol/vsf-debug.js",

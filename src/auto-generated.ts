@@ -46,7 +46,7 @@ const entries = {
 export const setup = {
     name:'@youwol/vsf-debug',
         assetId:'QHlvdXdvbC92c2YtZGVidWc=',
-    version:'0.1.0-wip',
+    version:'0.1.0',
     shortDescription:"",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/vsf-debug&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/vsf-debug',
@@ -92,7 +92,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/vsf-debug#0.1.0-wip~dist/@youwol/vsf-debug/${entry.name}.js`
+            `@youwol/vsf-debug#0.1.0~dist/@youwol/vsf-debug/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
