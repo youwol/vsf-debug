@@ -27,7 +27,9 @@ template = Template(
     version=pkg_json["version"],
     shortDescription=pkg_json["description"],
     author=pkg_json["author"],
-    dependencies=Dependencies(runTime=RunTimeDeps(externals=load_dependencies)),
+    dependencies=Dependencies(
+        runTime=RunTimeDeps(externals=load_dependencies),
+    ),
     bundles=Bundles(
         mainModule=MainModule(
             entryFile="./lib/toolbox.ts",
