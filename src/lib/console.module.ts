@@ -1,8 +1,8 @@
-import { Modules, Attributes } from '@youwol/vsf-core'
+import { Modules, Configurations, Contracts } from '@youwol/vsf-core'
 
 export const configuration = {
     schema: {
-        prefix: new Attributes.String({
+        prefix: new Configurations.String({
             value: '',
         }),
     },
@@ -11,7 +11,7 @@ export const configuration = {
 export const inputs = {
     input$: {
         description: 'the input stream',
-        contract: Modules.expect.ofUnknown,
+        contract: Contracts.ofUnknown,
     },
 }
 
