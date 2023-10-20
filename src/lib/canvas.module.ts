@@ -1,9 +1,9 @@
-import { Modules, Configurations, Contracts } from '@youwol/vsf-core'
+import { Modules, Contracts } from '@youwol/vsf-core'
 import { child$ } from '@youwol/flux-view'
 
 export const configuration = {
     schema: {
-        vDom: new Configurations.JsCode({
+        vDom: Modules.jsCodeAttribute({
             value: (message) => {
                 return {
                     tag: 'pre',

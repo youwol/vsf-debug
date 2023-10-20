@@ -1,8 +1,8 @@
-import { Modules, Configurations, Contracts } from '@youwol/vsf-core'
+import { Modules, Contracts } from '@youwol/vsf-core'
 
 export const configuration = {
     schema: {
-        prefix: new Configurations.String({
+        prefix: Modules.stringAttribute({
             value: '',
         }),
     },
