@@ -1,6 +1,6 @@
 {
     "name": "@youwol/vsf-debug",
-    "description": "",
+    "description": "Modules to debug Visual Studio Flow projects.",
     "version": "0.2.1",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/vsf-debug#README.md",
@@ -28,7 +28,7 @@
         ]
     },
     "dependencies": {
-        "@youwol/vsf-core": "^0.2.0",
+        "@youwol/vsf-core": "^0.2.4",
         "@youwol/flux-view": "^1.1.1"
     },
     "devDependencies": {
@@ -51,7 +51,7 @@
     },
     "webpm": {
         "dependencies": {
-            "@youwol/vsf-core": "^0.2.0",
+            "@youwol/vsf-core": "^0.2.4",
             "@youwol/flux-view": "^1.1.1"
         },
         "aliases": []

@@ -1,7 +1,7 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/vsf-core": "^0.2.0",
+        "@youwol/vsf-core": "^0.2.4",
         "@youwol/flux-view": "^1.1.1"
     },
     "includedInBundle": {}
@@ -47,7 +47,7 @@ export const setup = {
     name:'@youwol/vsf-debug',
         assetId:'QHlvdXdvbC92c2YtZGVidWc=',
     version:'0.2.1',
-    shortDescription:"",
+    shortDescription:"Modules to debug Visual Studio Flow projects.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/vsf-debug&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/vsf-debug',
     sourceGithub:'https://github.com/youwol/vsf-debug',
