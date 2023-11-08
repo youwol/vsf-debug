@@ -47,7 +47,7 @@ export const setup = {
     name:'@youwol/vsf-debug',
         assetId:'QHlvdXdvbC92c2YtZGVidWc=',
     version:'0.2.1',
-    shortDescription:"",
+    shortDescription:"Modules to debug Visual Studio Flow projects.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/vsf-debug&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/vsf-debug',
     sourceGithub:'https://github.com/youwol/vsf-debug',

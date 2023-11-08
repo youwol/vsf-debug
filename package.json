@@ -1,6 +1,6 @@
 {
     "name": "@youwol/vsf-debug",
-    "description": "",
+    "description": "Modules to debug Visual Studio Flow projects.",
     "version": "0.2.1",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/vsf-debug#README.md",
