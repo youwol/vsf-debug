@@ -1,31 +1,31 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/vsf-core": "^0.2.4",
-        "@youwol/flux-view": "^1.1.1"
+        "@youwol/rx-vdom": "^1.0.3",
+        "@youwol/vsf-core": "^0.3.3"
     },
     "includedInBundle": {}
 }
 const externals = {
+    "@youwol/rx-vdom": {
+        "commonjs": "@youwol/rx-vdom",
+        "commonjs2": "@youwol/rx-vdom",
+        "root": "@youwol/rx-vdom_APIv1"
+    },
     "@youwol/vsf-core": {
         "commonjs": "@youwol/vsf-core",
         "commonjs2": "@youwol/vsf-core",
-        "root": "@youwol/vsf-core_APIv02"
-    },
-    "@youwol/flux-view": {
-        "commonjs": "@youwol/flux-view",
-        "commonjs2": "@youwol/flux-view",
-        "root": "@youwol/flux-view_APIv1"
+        "root": "@youwol/vsf-core_APIv03"
     }
 }
 const exportedSymbols = {
-    "@youwol/vsf-core": {
-        "apiKey": "02",
-        "exportedSymbol": "@youwol/vsf-core"
-    },
-    "@youwol/flux-view": {
+    "@youwol/rx-vdom": {
         "apiKey": "1",
-        "exportedSymbol": "@youwol/flux-view"
+        "exportedSymbol": "@youwol/rx-vdom"
+    },
+    "@youwol/vsf-core": {
+        "apiKey": "03",
+        "exportedSymbol": "@youwol/vsf-core"
     }
 }
 
@@ -33,7 +33,7 @@ const mainEntry : {entryFile: string,loadDependencies:string[]} = {
     "entryFile": "./lib/toolbox.ts",
     "loadDependencies": [
         "@youwol/vsf-core",
-        "@youwol/flux-view"
+        "@youwol/rx-vdom"
     ]
 }
 
@@ -46,13 +46,13 @@ const entries = {
 export const setup = {
     name:'@youwol/vsf-debug',
         assetId:'QHlvdXdvbC92c2YtZGVidWc=',
-    version:'0.2.1',
+    version:'0.3.0-wip',
     shortDescription:"Modules to debug Visual Studio Flow projects.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/vsf-debug&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/vsf-debug',
     sourceGithub:'https://github.com/youwol/vsf-debug',
     userGuide:'',
-    apiVersion:'02',
+    apiVersion:'03',
     runTimeDependencies,
     externals,
     exportedSymbols,
@@ -77,7 +77,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/vsf-debug_APIv02`]
+            return window[`@youwol/vsf-debug_APIv03`]
         })
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
@@ -92,7 +92,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/vsf-debug#0.2.1~dist/@youwol/vsf-debug/${entry.name}.js`
+            `@youwol/vsf-debug#0.3.0-wip~dist/@youwol/vsf-debug/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
@@ -103,7 +103,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/vsf-debug/${entry.name}_APIv02`]
+            return window[`@youwol/vsf-debug/${entry.name}_APIv03`]
         })
     },
     getCdnDependencies(name?: string){
