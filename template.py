@@ -17,12 +17,12 @@ folder_path = Path(__file__).parent
 pkg_json = parse_json(folder_path / "package.json")
 
 load_dependencies = {
-    "@youwol/vsf-core": "^0.2.4",
-    "@youwol/flux-view": "^1.1.1",
+    "@youwol/vsf-core": "^0.3.3",
+    "@youwol/rx-vdom": "^1.0.3",
 }
 template = Template(
     path=folder_path,
-    type=PackageType.Library,
+    type=PackageType.LIBRARY,
     name=pkg_json["name"],
     version=pkg_json["version"],
     shortDescription=pkg_json["description"],
@@ -33,7 +33,7 @@ template = Template(
     bundles=Bundles(
         mainModule=MainModule(
             entryFile="./lib/toolbox.ts",
-            loadDependencies=["@youwol/vsf-core", "@youwol/flux-view"],
+            loadDependencies=["@youwol/vsf-core", "@youwol/rx-vdom"],
         ),
     ),
     userGuide=False,
