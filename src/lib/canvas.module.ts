@@ -1,12 +1,11 @@
 import { Modules, Contracts } from '@youwol/vsf-core'
-import { child$ } from '@youwol/flux-view'
 
 export const configuration = {
     schema: {
         vDom: Modules.jsCodeAttribute({
             value: (message) => {
                 return {
-                    tag: 'pre',
+                    tag: 'pre' as const,
                     innerText: JSON.stringify(message, null, 4),
                 }
             },
@@ -35,13 +34,15 @@ export function module(fwdParams) {
             outputs,
             canvas: (instance) => {
                 return {
+                    tag: 'div',
                     children: [
-                        child$(
-                            instance.inputSlots.input$.preparedMessage$,
-                            (message) => {
+                        {
+                            source$:
+                                instance.inputSlots.input$.preparedMessage$,
+                            vdomMap: (message: Modules.ProcessingMessage) => {
                                 return message.configuration['vDom'](message)
                             },
-                        ),
+                        },
                     ],
                 }
             },
